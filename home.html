@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fittly - Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-top: 15%;
+            font-size: 3rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .arrow-btn {
+            margin-top: 50px;
+            background: white;
+            color: #0072ff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .arrow-btn:hover {
+            background: #ffeb3b;
+            color: black;
+        }
+
+        .arrow-btn::after {
+            content: "➔";
+            margin-left: 10px;
+            transition: margin-left 0.3s;
+        }
+
+        .arrow-btn:hover::after {
+            margin-left: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to Fittly</h1>
+    <p>Your journey to productivity starts here.</p>
+
+    <button class="arrow-btn" onclick="goToTaskManager()">Open Task Manager</button>
+
+    <script>
+        function goToTaskManager() {
+            // Here you can't open Windows Task Manager directly
+            // Instead, redirect to your Spring Boot "task manager" page
+            window.location.href = "http://127.0.0.1:5500/index.html"; 
+        }
+    </script>
+
+</body>
+</html>
